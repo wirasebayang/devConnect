@@ -6,7 +6,7 @@ let profiles = document.querySelector('.name-i')
 let menu = document.querySelector('.menu')
 let menus = document.querySelector('.names')
 let nav = document.querySelector('.navbar')
-let logo =document.querySelector('.logo')
+let logo = document.querySelector('.logo')
 let searchBtn = document.querySelector('.search-icon')
 let searchBar = document.querySelector('.searchBar')
 let afterLog = document.querySelector('.afterLogin')
@@ -17,7 +17,7 @@ let inputUser = document.getElementById('username')
 let inputPassword = document.getElementById('password')
 let submit = document.querySelector('.login-Btn')
 
-if(username){
+if (username) {
     viewLog.style.display = "none";
     profile.innerText = username.username[0].toUpperCase() + username.username[1].toUpperCase()
     profiles.innerText = username.username[0].toUpperCase() + username.username[1].toUpperCase()
@@ -29,22 +29,20 @@ if(username){
     afterLog.classList.toggle('views')
 }
 
-
-if(submit) {
+if (submit) {
     submit.addEventListener('click', (e) => {
 
         e.preventDefault()
-    
-        if(!inputUser.value || !inputPassword.value){
+
+        if (!inputUser.value || !inputPassword.value) {
             alert('Data Invalid')
         } else {
-            localStorage.setItem('username', JSON.stringify({username: inputUser.value, password: inputPassword.value}))
-            
+            localStorage.setItem('username', JSON.stringify({ username: inputUser.value, password: inputPassword.value }))
+
             window.location.replace("index.html")
         }
     })
 }
-
 
 profile.addEventListener('click', () => {
     menu.classList.add('view')
@@ -60,8 +58,13 @@ searchBtn.addEventListener('click', () => {
 
 logoutBtn.addEventListener('click', () => {
 
-    localStorage.removeItem('username')
-    location.reload();
+    let hasil = window.confirm("Apakah Anda yakin ingin keluar?");
+
+    if (hasil) {
+        localStorage.removeItem('username')
+        location.reload();
+    }
+
 }
 )
 
