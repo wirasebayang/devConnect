@@ -19,15 +19,36 @@ let submit = document.querySelector('.login-Btn')
 let header = document.querySelector('.header')
 
 if (username) {
-    viewLog.style.display = "none";
     profile.innerText = username.username[0].toUpperCase() + username.username[1].toUpperCase()
     profiles.innerText = username.username[0].toUpperCase() + username.username[1].toUpperCase()
     profile.classList.toggle('title')
     profiles.classList.toggle('title')
     menus.innerText = username.username
-    nav.style.display = "none"
-    logo.style.flex = "2"
     afterLog.classList.toggle('views')
+
+    profile.addEventListener('click', () => {
+        menu.classList.add('view')
+    })
+
+    menus.addEventListener('click', () => {
+        menu.classList.remove('view')
+    })
+
+    searchBtn.addEventListener('click', () => {
+        searchBar.classList.toggle('toogle')
+    })
+    
+    logoutBtn.addEventListener('click', () => {
+    
+        let hasil = window.confirm("Apakah Anda yakin ingin keluar?");
+    
+        if (hasil) {
+            localStorage.removeItem('username')
+            window.location.replace("index.html")
+        }
+    
+    }
+    )
 }
 
 if (submit) {
@@ -40,37 +61,23 @@ if (submit) {
         } else {
             localStorage.setItem('username', JSON.stringify({ username: inputUser.value, password: inputPassword.value }))
 
-            window.location.replace("index.html")
+            window.location.replace("feed.html")
         }
     })
 }
 
-profile.addEventListener('click', () => {
-    menu.classList.add('view')
-})
-
-menus.addEventListener('click', () => {
-    menu.classList.remove('view')
-})
-
-searchBtn.addEventListener('click', () => {
-    searchBar.classList.toggle('toogle')
-})
-
-// header.addEventListener('click', () => {
-//     searchBar.classList.remove('toogle')
-// })
-
-logoutBtn.addEventListener('click', () => {
-
+logo.addEventListener('click', () => {
     let hasil = window.confirm("Apakah Anda yakin ingin keluar?");
 
     if (hasil) {
         localStorage.removeItem('username')
-        location.reload();
+        window.location.replace("index.html")
     }
 
-}
-)
+})
+
+
+
+
 
 
