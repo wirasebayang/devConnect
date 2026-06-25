@@ -45,6 +45,12 @@ if (username) {
         menu.classList.remove('view')
     })
 
+    document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !profile.contains(e.target)) {
+            menu.classList.remove('view');
+        }
+    });
+
     searchBtn.addEventListener('click', () => {
         searchBar.classList.toggle('toogle')
     })
@@ -55,7 +61,7 @@ if (username) {
 
         if (hasil) {
             localStorage.removeItem('username')
-            window.location.replace("/")
+            window.location.replace("../index.html")
         }
 
     }
@@ -129,7 +135,7 @@ feedBtn.addEventListener("click", () => {
 
     if (hasil) {
         localStorage.removeItem('username')
-        window.location.replace("/")
+        window.location.replace("../index.html")
     }
 
 })
