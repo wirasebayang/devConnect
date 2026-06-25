@@ -20,7 +20,11 @@
     text-decoration: none;
 }
 
-.navbar {
+.logo {
+    flex-grow: 2;
+}
+
+/* .navbar {
     background-color: var(--bg-dark);
     flex-grow: 2;
     justify-content: center;
@@ -39,7 +43,7 @@ display: flex;
     padding: 10px;
     color: var(--cyan);
     font-size: 1.3rem;
-}
+} */
 
 .logo strong{
     columns: var(--white);
@@ -80,8 +84,11 @@ textarea {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
+
+
 .inputStat {
     color: var(--white);
+    padding: 1rem;
 }
 .compose-footer {
     display: flex;
@@ -160,4 +167,9 @@ textarea {
     text-align: center;
     font-size: 1.1rem;
     cursor: pointer;
+}
+
+.feed {
+    padding-top: 80px;
+    border: none;
 }
