@@ -26,6 +26,9 @@ const cancelEdit = document.getElementById("cancelEdit");
 const confirmDelete = document.getElementById("confirmDelete");
 const cancelDelete = document.getElementById("cancelDelete");
 
+const close = document.querySelector('.close')
+const closeIcon = document.querySelector('.closeIcon')
+
 let selectedId = null;
 
 if (username) {
@@ -67,9 +70,20 @@ if (username) {
     }
     )
 
-    aboutUs.addEventListener('click', (e) => {
+    close.addEventListener('click', () => {
         displayUs.classList.toggle('display')
+        close.classList.toggle('closeDisplay')
     })
+
+    aboutUs.addEventListener('click', () => {
+        displayUs.classList.toggle('display')
+        close.classList.toggle('closeDisplay')
+        menu.classList.toggle('view')
+    })
+
+    // aboutUs.addEventListener('click', (e) => {
+    //     displayUs.classList.toggle('display')
+    // })
 }
 
 let feed = [{}]
