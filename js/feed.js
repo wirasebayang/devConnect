@@ -49,8 +49,6 @@ if (username) {
     })
 }
 
-let feedBtn = document.querySelector(".btn-post");
-let feedContainer = document.querySelector(".feedContainer");
 let feed = [{}]
 
 feedBtn.addEventListener("click", () => {
