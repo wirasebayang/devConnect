@@ -137,16 +137,24 @@
 }
 
 .searchBar {
-    /* top: 3px; */
+    cursor: default;
     font-size: 1rem;
     padding:10px 20px;
     width: 300px;
-    right: 190px;
     border-radius: 20px;
-    display: none;
+    display: flex;
+    opacity: 0;
     border: none;
+    transition: all 0.5s ease;
+    transform: translateX(100px);
     color: var(--secondary);
     background-color: var(--darkBlue);
+}
+
+.toogle {
+    transform: translateX(0);
+    display: flex;
+    opacity: 1;
 }
 
 .search-icon {
@@ -158,8 +166,13 @@
     /* background-color: red; */
 }
 
+.notif {
+    z-index: 5;
+}
+
 .notif-icon {
     color: var(--white) !important;
+    z-index: 99;
 }
 
 .search-icon:hover {
@@ -173,7 +186,6 @@
 
 .notif:hover {
     transform: scale(1.2);
-    transition: 0.4s;
 }
 
 body {
@@ -233,7 +245,7 @@ p {
     transition: 0.5s ease;
 }
 
-.feed {
+.feeds {
     border-radius: 10px;
     border: 1px solid var(--border-hoverDark);
     align-self: center;
@@ -525,20 +537,37 @@ p {
     justify-content: center;
     gap: 30px;
     padding: 0 190px 30px 190px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .content {
     background-color: var(--bg-dnavbar);
-    padding: 120px 0 10px 0;
+    padding: 10px 10px 15px 10px;
     text-align: center;
     font-size: 1.1rem;
     border-radius: 20px;
     border: 1px solid var(--border-hoverDark);
     cursor: pointer;
     transition: 0.5s ease;
+    /* width: 350px; */
 }
 
+.content:nth-child(5) {
+    grid-column: 2;
+  }
+
+.content:nth-child(6) {
+    grid-column: 3;
+  }
+  
+
+
+.img {
+    width: 100%;
+    height: 230px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
 
 
 .init {
@@ -549,6 +578,39 @@ p {
     width: 60px;
     border: 1px solid var(--border-hoverDark);
     color: var(--cyan);
+    /* left: 120px; */
+    height: 60px;
+}
+
+.insta {
+    cursor: pointer;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 80px; */
+}
+
+.inits {
+    background-color: var(--cyan);
+    opacity: 0;
+    position: absolute;
+    color: var(--white);
+    transform: translateY(-50px);
+    display: flex;
+    align-items: center;
+    /* margin-left: 24px; */
+    height: 60px;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+
+.init:hover + .inits {
+    box-shadow: 0 0 5px var(--cyan);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .content:hover{

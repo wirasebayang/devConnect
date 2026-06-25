@@ -16,6 +16,7 @@ let body = document.getElementsByTagName('body')
 let inputUser = document.getElementById('username')
 let inputPassword = document.getElementById('password')
 let submit = document.querySelector('.login-Btn')
+let header = document.querySelector('.header')
 
 if (username) {
     viewLog.style.display = "none";
@@ -53,8 +54,12 @@ menus.addEventListener('click', () => {
 })
 
 searchBtn.addEventListener('click', () => {
-    searchBar.style.display = "flex"
+    searchBar.classList.toggle('toogle')
 })
+
+// header.addEventListener('click', () => {
+//     searchBar.classList.remove('toogle')
+// })
 
 logoutBtn.addEventListener('click', () => {
 
