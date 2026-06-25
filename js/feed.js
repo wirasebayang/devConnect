@@ -1,22 +1,13 @@
-let loginBtn = document.querySelector('.login')
+let logo = document.querySelector('.logo')
 let username = JSON.parse(localStorage.getItem('username'))
-let viewLog = document.querySelector('.login-btn')
 let profile = document.querySelector('.name')
 let profiles = document.querySelector('.name-i')
 let menu = document.querySelector('.menu')
 let menus = document.querySelector('.names')
-let nav = document.querySelector('.navbar')
-let logo = document.querySelector('.logo')
 let searchBtn = document.querySelector('.search-icon')
 let searchBar = document.querySelector('.searchBar')
 let afterLog = document.querySelector('.afterLogin')
 let logoutBtn = document.querySelector('.logout')
-let formView = document.querySelector('.formLogin')
-let body = document.getElementsByTagName('body')
-let inputUser = document.getElementById('username')
-let inputPassword = document.getElementById('password')
-let submit = document.querySelector('.login-Btn')
-let header = document.querySelector('.header')
 
 if (username) {
     profile.innerText = username.username[0].toUpperCase() + username.username[1].toUpperCase()
@@ -44,26 +35,11 @@ if (username) {
     
         if (hasil) {
             localStorage.removeItem('username')
-            window.location.replace("index.html")
+            window.location.replace("../index.html")
         }
     
     }
     )
-}
-
-if (submit) {
-    submit.addEventListener('click', (e) => {
-
-        e.preventDefault()
-
-        if (!inputUser.value || !inputPassword.value) {
-            alert('Data Invalid')
-        } else {
-            localStorage.setItem('username', JSON.stringify({ username: inputUser.value, password: inputPassword.value }))
-
-            window.location.replace("feed.html")
-        }
-    })
 }
 
 logo.addEventListener('click', () => {
@@ -71,13 +47,7 @@ logo.addEventListener('click', () => {
 
     if (hasil) {
         localStorage.removeItem('username')
-        window.location.replace("index.html")
-    }
+        window.location.replace("../index.html")
+    } 
 
 })
-
-
-
-
-
-
