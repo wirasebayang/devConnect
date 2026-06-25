@@ -12,6 +12,58 @@
     <title>devConnect</title>
 </head>
 
+<!-- MODAL EDIT -->
+<div class="modal-overlay" id="editModal">
+    <div class="modal-box">
+        <h3>Edit Status</h3>
+
+        <textarea id="editInput"></textarea>
+
+        <div class="modal-actions">
+            <button id="cancelEdit">Batal</button>
+            <button id="saveEdit">Simpan</button>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL DELETE -->
+<div class="modal-overlay" id="deleteModal">
+    <div class="modal-box">
+        <h3>Hapus Status</h3>
+
+        <p>Status ini akan dihapus permanen.</p>
+
+        <div class="modal-actions">
+            <button id="cancelDelete">Batal</button>
+            <button id="confirmDelete">Hapus</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="commentModal">
+
+    <div class="modal-box">
+
+        <h3>Komentar</h3>
+
+        <div id="commentList"></div>
+
+        <textarea id="commentInput" placeholder="Tulis komentar..."></textarea>
+
+        <div class="modal-actions">
+            <button id="closeComment">
+                Tutup
+            </button>
+
+            <button id="sendComment">
+                Kirim
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
 <body>
     <header class="header">
         <div class="logo">
@@ -93,18 +145,50 @@
 
         <!-- COMPOSE -->
         <div class="compose">
+
             <textarea placeholder="Mau share apa hari ini?" class="inputStat"></textarea>
+
+            <div class="code-wrapper hidden">
+
+                <textarea class="codeInput" placeholder="Tulis kode di sini..."></textarea>
+
+            </div>
+
+            <div class="image-preview-container">
+                <img id="imagePreview" class="image-preview hidden">
+            </div>
+
             <div class="compose-footer">
-                <div class="btn-code">&lt;/&gt;</div>
+
+                <div class="left-actions">
+
+                    <div class="btn-code">&lt;/&gt;</div>
+
+                    <label for="imageUpload" class="btn-upload">
+                        📷
+                    </label>
+
+                    <input type="file" id="imageUpload" accept="image/*" hidden>
+
+                    <span id="fileName"></span>
+
+                </div>
+
                 <button class="btn-post">Post</button>
+
             </div>
         </div>
+
+        <div class="feedContainer"></div>
 
     </main>
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
 
-        <script src="/js/feed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <script src="/js/feed.js"></script>
 </body>
 
 </html>
