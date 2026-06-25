@@ -15,13 +15,13 @@
 <body>
     <header class="header">
         <div class="logo">
-            <a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
                     class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round"
                     stroke-linejoin="round" stroke-width="2">
                     <polyline points="16 18 22 12 16 6" />
                     <polyline points="8 6 2 12 8 18" />
                 </svg></a>
-            <a href="../index.html" class="logo-name"><span>dev</span>Connect</a>
+            <a href="#" class="logo-name"><span>dev</span>Connect</a>
         </div>
 
         <div class="afterLogin">
@@ -52,7 +52,7 @@
             <div class="names">Nama</div>
         </div>
         <div class="menu-list">
-            <a href="#" class="list">
+            <a href="#" class="list editUser">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
                     class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round"
                     stroke-linejoin="round" stroke-width="2">
@@ -67,7 +67,7 @@
                     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
                 </svg>
                 Feed</a>
-            <a href="#aboutUs" class="list">
+            <a href="#aboutUs" class="list timKami">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
                     class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round"
                     stroke-linejoin="round" stroke-width="2">
@@ -91,20 +91,134 @@
     <!-- FEED -->
     <main class="feed">
 
-        <!-- COMPOSE -->
-        <div class="compose">
-            <textarea placeholder="Mau share apa hari ini?" class="inputStat"></textarea>
-            <div class="compose-footer">
-                <div class="btn-code">&lt;/&gt;</div>
-                <button class="btn-post">Post</button>
+        <div class="containerFeed">
+            <div class="compose">
+                <textarea placeholder="Mau share apa hari ini?" class="inputStat"></textarea>
+                <div class="compose-footer">
+                    <div class="btn-code">&lt;/&gt;</div>
+                    <button class="btn-post">Post</button>
+                </div>
             </div>
+
+            <div class="feedContainer"></div>
         </div>
 
     </main>
 
+    <footer class="tim" id="aboutUs">
+        <div class="content instructor">
+            <img src="/assets/Sony_Mellifriady.jpg" alt="" srcset="" class="img">
+            <div class="insta">
+                <a class="init">SO</a>
+                <a href="https://www.instagram.com/klimboys/" class="init inits  instructors">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" style="color: #fff;">
+                        <rect height="20" rx="5" ry="5" width="20" x="2" y="2" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                </a>
+            </div>
+            <div class="nama">Sony Mellifriady</div>
+            <div class="peran">Instructor</div>
+        </div>
+        <div class="content">
+            <img src="/assets/rusdi.jpg" alt="" srcset="" class="img">
+            <div class="insta">
+                <a class="init">MR</a>
+                <a href="https://www.instagram.com/rusdi.an2/" class="init inits">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" style="color: #fff;">
+                        <rect height="20" rx="5" ry="5" width="20" x="2" y="2" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                </a>
+            </div>
+            <div class="nama">Muhamad Rusdiana</div>
+            <div class="peran">Fullstack dev</div>
+        </div>
+        <div class="content">
+            <img src="/assets/kai.jpg" alt="" srcset="" class="img">
+            <div class="insta">
+                <a class="init">KA</a>
+                <a href="https://www.instagram.com/kaisarea_kai?utm_source=qr&igsh=MTNnamN1eGZncWo2cA=="
+                    class="init inits">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" style="color: #fff;">
+                        <rect height="20" rx="5" ry="5" width="20" x="2" y="2" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                </a>
+            </div>
+            <div class="nama">Kaisarea Tennisi</div>
+            <div class="peran">Frontend dev</div>
+        </div>
+        <div class="content">
+            <img src="/assets/wira.JPG" alt="" srcset="" class="img">
+            <div class="insta">
+                <a class="init">FW</a>
+                <a href="https://www.instagram.com/wirasebayangg_" class="init inits">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" style="color: #fff;">
+                        <rect height="20" rx="5" ry="5" width="20" x="2" y="2" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                </a>
+            </div>
+            <div class="nama">Fatwa Wiratama Sebayang</div>
+            <div class="peran">Fullstack dev</div>
+        </div>
+        <div class="content">
+            <img src="/assets/bagus.jpg" alt="" srcset="" class="img">
+            <div class="insta">
+                <a class="init">TW</a>
+                <a href="https://www.instagram.com/pratamaawidi?igsh=MTZndWIzbzBjNmd6bw%3D%3D&utm_source=qr"
+                    class="init inits">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" style="color: #fff;">
+                        <rect height="20" rx="5" ry="5" width="20" x="2" y="2" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                </a>
+            </div>
+            <div class="nama">Tubagus Widi Pratama</div>
+            <div class="peran">Frontend dev</div>
+        </div>
+        <div class="content">
+            <img src="/assets/salsa.JPG" alt="" srcset="" class="img">
+            <div class="insta">
+                <a class="init">SA</a>
+                <a href="https://www.instagram.com/salsabela.bila?igsh=NXM4Z2pwdXV4NThh" class="init inits">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" style="color: #fff;">
+                        <rect height="20" rx="5" ry="5" width="20" x="2" y="2" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                </a>
+            </div>
+            <div class="nama">Salsabila</div>
+            <div class="peran">Frontend dev</div>
+        </div>
+    </footer>
+
+    </div>
 
 
-        <script src="/js/feed.js"></script>
+
+
+
+    <script src="/js/feed.js"></script>
 </body>
 
 </html>
