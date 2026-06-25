@@ -1,82 +1,154 @@
-// let loginBtn = document.querySelector('.login')
-// let username = JSON.parse(localStorage.getItem('username'))
-// let viewLog = document.querySelector('.login-btn')
-// // let profile = document.querySelector('.name')
-// // let profiles = document.querySelector('.name-i')
-// let menu = document.querySelector('.menu')
-// let menus = document.querySelector('.names')
-// let nav = document.querySelector('.navbar')
-// let logo = document.querySelector('.logo')
-// // let searchBtn = document.querySelector('.search-icon')
-// // let searchBar = document.querySelector('.searchBar')
-// // let afterLog = document.querySelector('.afterLogin')
-// // let logoutBtn = document.querySelector('.logout')
-// let formView = document.querySelector('.formLogin')
-// let inputUser = document.getElementById('username')
-// let inputPassword = document.getElementById('password')
-// let submit = document.querySelector('.login-Btn')
-// let header = document.querySelector('.header')
+let loginBtn = document.querySelector('.login')
+let username = JSON.parse(localStorage.getItem('username'))
+let viewLog = document.querySelector('.login-btn')
+let profile = document.querySelector('.name')
+let profiles = document.querySelector('.name-i')
+let menu = document.querySelector('.menu')
+let menus = document.querySelector('.names')
+let nav = document.querySelector('.navbar')
+let logo = document.querySelector('.logo')
+let searchBtn = document.querySelector('.search-icon')
+let searchBar = document.querySelector('.searchBar')
+let afterLog = document.querySelector('.afterLogin')
+let logoutBtn = document.querySelector('.logout')
+let formView = document.querySelector('.formLogin')
+let body = document.getElementsByTagName('body')
+let inputUser = document.getElementById('username')
+let inputPassword = document.getElementById('password')
+let submit = document.querySelector('.login-Btn');
 
-// // if (username) {
-// //     profile.innerText = username.username[0].toUpperCase() + username.username[1].toUpperCase()
-// //     profiles.innerText = username.username[0].toUpperCase() + username.username[1].toUpperCase()
-// //     profile.classList.toggle('title')
-// //     profiles.classList.toggle('title')
-// //     menus.innerText = username.username
-// //     afterLog.classList.toggle('views')
+// data dummy
+// const initData = [
+//     { id: 1, status: "Build fitur chat realtime", like: 25 },
+//     { id: 2, status: "Integrasi payment gateway", like: 19 },
+//     { id: 3, status: "Setup CI/CD pipeline", like: 11 },
+//     { id: 4, status: "Testing end-to-end pakai Playwright", like: 6 },
+//     { id: 5, status: "Launching MVP minggu ini", like: 30 },
+// ],
 
-// //     profile.addEventListener('click', () => {
-// //         menu.classList.add('view')
-// //     })
+// glolbal function
+// function getDataLocal(key) {
+//     if (!key) {
+//         return null
+//     }
+//     return JSON.parse(localStorage.getItem(key))
+// }
 
-// //     menus.addEventListener('click', () => {
-// //         menu.classList.remove('view')
-// //     })
+// function setDataFeedLocal(key, payload) {
+//     if (!key || !payload) {
+//         return false
+//     }
 
-// //     searchBtn.addEventListener('click', () => {
-// //         searchBar.classList.toggle('toogle')
-// //     })
-    
-// //     logoutBtn.addEventListener('click', () => {
-    
-// //         let hasil = window.confirm("Apakah Anda yakin ingin keluar?");
-    
-// //         if (hasil) {
-// //             localStorage.removeItem('username')
-// //             window.location.replace("../index.html")
-// //         }
-    
-// //     }
-// //     )
-// // }
+//     localStorage.setItem(key, JSON.stringify(payload))
 
-// // if (submit) {
-// //     submit.addEventListener('click', (e) => {
+//     return true
+// }
 
-// //         e.preventDefault()
+// if (username) {
+//     profile.innerText = username.username[0].toUpperCase() + username.username[1].toUpperCase()
+//     profiles.innerText = username.username[0].toUpperCase() + username.username[1].toUpperCase()
+//     profile.classList.toggle('title')
+//     profiles.classList.toggle('title')
+//     menus.innerText = username.username
+//     logo.style.flex = "2"
+// }
 
-// //         if (!inputUser.value || !inputPassword.value) {
-// //             alert('Data Invalid')
-// //         } else {
-// //             localStorage.setItem('username', JSON.stringify({ username: inputUser.value, password: inputPassword.value }))
+// if (submit) {
+//     submit.addEventListener('click', (e) => {
 
-// //             window.location.replace("/feed/index.html")
-// //         }
-// //     })
-// // }
+//         e.preventDefault()
 
-// // logo.addEventListener('click', () => {
-// //     let hasil = window.confirm("Apakah Anda yakin ingin keluar?");
+//         if (!inputUser.value || !inputPassword.value) {
+//             alert('Data Invalid')
+//         } else {
+//             localStorage.setItem('username', JSON.stringify({ username: inputUser.value, password: inputPassword.value }))
 
-// //     if (hasil) {
-// //         localStorage.removeItem('username')
-// //         window.location.replace("../index.html")
-// //     }
+//             window.location.replace("feed.html")
+//         }
+//     })
+// }
 
-// // })
+// profile.addEventListener('click', () => {
+//     menu.classList.add('view')
+// })
 
+// menus.addEventListener('click', () => {
+//     menu.classList.remove('view')
+// })
 
+// searchBtn.addEventListener('click', () => {
+//     searchBar.style.display = "flex"
+// })
 
+// logoutBtn.addEventListener('click', () => {
 
+//     let hasil = window.confirm("Apakah Anda yakin ingin keluar?");
 
+//     if (hasil) {
+//         localStorage.removeItem('username')
+//         location.reload();
+//     }
 
+// }
+// )
+
+// const feedBtn = document.querySelector(".btn-post");
+// const feedContainer = document.querySelector(".feedContainer");
+
+// feedBtn.addEventListener("click", (e) => {
+//     e.preventDefault()
+//     const author = username.username
+//     const handle = "@" + username.username.toLowerCase()
+//     const avatar = username.username[0].toUpperCase() + username.username[1].toUpperCase()
+//     const text = document.querySelector('.inputStat').value;
+//     console.log('aaaaaa')
+
+//     const post = document.createElement("div");
+//     post.classList.add("post");
+
+//     post.innerHTML = `
+//     <div class="post-header">
+//       <div class="avatar">${avatar}</div>
+
+//       <div class="post-meta">
+//         <span class="post-author">${author}</span>
+//         <span class="post-handle">${handle} · baru saja</span>
+//       </div>
+//     </div>
+
+//     <p class="post-text">${text}</p>
+
+//     <div class="post-actions">
+//       <div class="btn-action">♡ 0</div>
+//       <div class="btn-action">💬 0</div>
+//       <div class="btn-action">↗</div>
+//     </div>
+//   `;
+
+//     let statusObj = localStorage.setItem('status', JSON.stringify([]))
+//     let obj = JSON.parse(localStorage.getItem("status"))
+
+//     //status; {}
+
+//     // if (!obj[username.username]) {
+//     //     JSON.stringify(obj[username.username], {avatar: avatar, author: author, handle: handle, text: text })
+//     // }
+
+//     // console.log(obj);
+//     console.log(avatar, author, handle, text);
+//     // localStorage.setItem('status', JSON.stringify({ avatar: avatar, author: author, handle: handle, text: text }))
+//     // feedContainer.prepend(post);
+
+//     // kosongkan form setelah posting
+//     // document.querySelector(".inputstat").innerHTML = "";
+// });
+
+// setDataFeedLocal('status', initData)
+
+// console.log(getDataLocal('status'));
+// const dataFeeds = getDataLocal('status');
+
+// if (!dataFeeds || dataFeeds.length === 0) {
+    // setDataFeedLocal('status', initData)
+
+// }
