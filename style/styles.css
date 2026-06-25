@@ -26,13 +26,6 @@
 
 .feed {
     padding-top: 130px;
-    display: flex;
-    justify-content: center;
-}
-
-.containerFeed {
-    width: 80%;
-    display: inline-block;
 }
 
 .logo strong{
@@ -56,7 +49,6 @@
     padding: 15px;
     border-radius: 20px;
     margin: 5px 250px 20px 250px;
-
     
 }
 
@@ -159,10 +151,6 @@ textarea {
     text-align: center;
     font-size: 1.1rem;
     cursor: pointer;
-}
-
-.feed {
-    padding-top: 130px;
 }
 
 .modal-overlay {
@@ -533,11 +521,13 @@ textarea {
 
 .searchBar {
     cursor: text;
+}
+
 .tim {
     position: relative;
     background-image: linear-gradient(-20deg, var(--darkBlue)0%, var(--bg-dark)100%);
     padding-top: 30px;
-    margin-top: 120px;
+    /* margin-top: 120px; */
     width: 80%;
     margin-left: 140px;
     border: 1px solid var(--border-hoverDark);
@@ -554,4 +544,27 @@ textarea {
 
 .content {
     width: 250px;
+}
+
+.close {
+    /* background-color: red; */
+    display: none;
+    justify-content: end;
+    position: relative;
+    right: 155px;
+    bottom: -30px;
+    font-size: 1rem;
+    z-index: 1;
+    transition: 0.5 ease;
+    cursor: pointer;
+}
+
+.closeDisplay {
+    display: flex;
+}
+
+.closeIcon:hover{
+    transform: scale(1.2);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--cyan);
 }

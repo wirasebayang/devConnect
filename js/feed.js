@@ -10,6 +10,10 @@ let afterLog = document.querySelector('.afterLogin')
 let logoutBtn = document.querySelector('.logout')
 let aboutUs = document.querySelector('.timKami')
 let displayUs = document.querySelector('.tim')
+let close = document.querySelector('.close')
+let closeIcon = document.querySelector('.closeIcon')
+const feedBtn = document.querySelector(".btn-post");
+const feedContainer = document.querySelector(".feedContainer");
 
 if (username) {
     profile.innerText = username.username[0].toUpperCase() + username.username[1].toUpperCase()
@@ -44,84 +48,23 @@ if (username) {
     }
     )
 
-    aboutUs.addEventListener('click', (e) => {
+    close.addEventListener('click', () => {
         displayUs.classList.toggle('display')
+        close.classList.toggle('closeDisplay')
+    })
+
+    aboutUs.addEventListener('click', (e) => {
+
+        close.classList.toggle('closeDisplay')
+        // let num = 0;
+        displayUs.classList.toggle('display')
+
+        // if(num === 0) {
+        menu.classList.remove('view')
+        // }
     })
 }
 
-let feedBtn = document.querySelector(".btn-post");
-let feedContainer = document.querySelector(".feedContainer");
-let feed = [{}]
-
-feedBtn.addEventListener("click", () => {
-    // e.preventDefault()
-    let author = username.username
-    let handle = "@" + username.username.toLowerCase()
-    let avatar = username.username[0].toUpperCase() + username.username[1].toUpperCase()
-    let text = document.querySelector('.inputStat').value;
-    console.log('aaaaaa')
-
-    let post = document.createElement("div");
-    post.classList.add("post");
-
-    post.innerHTML = `
-    <div class="post-header">
-      <div class="avatar">${avatar}</div>
-      
-      <div class="post-meta">
-      <span class="post-author">${author}</span>
-      <span class="post-handle">${handle} · baru saja</span>
-      </div>
-      </div>
-      
-      <p class="post-text">${text}</p>
-      
-      <div class="post-actions">
-      <div class="btn-action">♡ 0</div>
-      <div class="btn-action">💬 0</div>
-      <div class="btn-action">↗</div>
-      </div>
-      `;
-
-    // let statusObj = localStorage.setItem('status', JSON.stringify([]))
-    // let obj = JSON.parse(localStorage.getItem("status"))
-
-    //status; {}
-
-    // if (!obj[username.username]) {
-    //     JSON.stringify(obj[username.username], {avatar: avatar, author: author, handle: handle, text: text })
-    // }
-
-    // console.log(obj);
-    // console.log(avatar, author, handle, text);
-
-    for (let i = 0; i < feed.length; i++) {
-
-        if (!feed[i][author]) {
-            feed[author] = {
-                avatar: avatar,
-                author: author,
-                handle: handle,
-                text: []
-            }
-        }
-
-        feed[author].text.push(text)
-    }
-
-    // localStorage.setItem('status', JSON.stringify({ avatar: avatar, author: author, handle: handle, text: text }))
-
-
-    if (hasil) {
-        localStorage.removeItem('username')
-        window.location.replace("../index.html")
-    }
-
-})
-
-
-const feedBtn = document.querySelector(".btn-post");
-const feedContainer = document.querySelector(".feedContainer");
 const searchInput = document.querySelector(".searchBar");
 
 const editModal = document.getElementById("editModal");
