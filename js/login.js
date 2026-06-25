@@ -13,7 +13,7 @@ if (submit) {
         } else {
             localStorage.setItem('username', JSON.stringify({ username: inputUser.value, password: inputPassword.value }))
 
-            window.location.replace("/feed/index.html")
+            window.location.replace("/feed")
         }
     })
 }

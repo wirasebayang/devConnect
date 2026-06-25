@@ -11,6 +11,23 @@ let logoutBtn = document.querySelector('.logout')
 let aboutUs = document.querySelector('.timKami')
 let displayUs = document.querySelector('.tim')
 
+const feedBtn = document.querySelector(".btn-post");
+const feedContainer = document.querySelector(".feedContainer");
+const searchInput = document.querySelector(".searchBar");
+
+const editModal = document.getElementById("editModal");
+const deleteModal = document.getElementById("deleteModal");
+
+const editInput = document.getElementById("editInput");
+
+const saveEdit = document.getElementById("saveEdit");
+const cancelEdit = document.getElementById("cancelEdit");
+
+const confirmDelete = document.getElementById("confirmDelete");
+const cancelDelete = document.getElementById("cancelDelete");
+
+let selectedId = null;
+
 if (username) {
     profile.innerText = username.username[0].toUpperCase() + username.username[1].toUpperCase()
     profiles.innerText = username.username[0].toUpperCase() + username.username[1].toUpperCase()
@@ -38,7 +55,7 @@ if (username) {
 
         if (hasil) {
             localStorage.removeItem('username')
-            window.location.replace("../index.html")
+            window.location.replace("/")
         }
 
     }
@@ -49,8 +66,6 @@ if (username) {
     })
 }
 
-let feedBtn = document.querySelector(".btn-post");
-let feedContainer = document.querySelector(".feedContainer");
 let feed = [{}]
 
 feedBtn.addEventListener("click", () => {
@@ -114,28 +129,13 @@ feedBtn.addEventListener("click", () => {
 
     if (hasil) {
         localStorage.removeItem('username')
-        window.location.replace("../index.html")
+        window.location.replace("/")
     }
 
 })
 
 
-const feedBtn = document.querySelector(".btn-post");
-const feedContainer = document.querySelector(".feedContainer");
-const searchInput = document.querySelector(".searchBar");
 
-const editModal = document.getElementById("editModal");
-const deleteModal = document.getElementById("deleteModal");
-
-const editInput = document.getElementById("editInput");
-
-const saveEdit = document.getElementById("saveEdit");
-const cancelEdit = document.getElementById("cancelEdit");
-
-const confirmDelete = document.getElementById("confirmDelete");
-const cancelDelete = document.getElementById("cancelDelete");
-
-let selectedId = null;
 
 
 feedBtn.addEventListener("click", (e) => {
